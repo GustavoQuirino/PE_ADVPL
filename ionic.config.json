@@ -1,0 +1,7 @@
+{
+  "name": "PE_ADVPL",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
