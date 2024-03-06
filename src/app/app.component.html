@@ -27,4 +27,13 @@
       <router-outlet></router-outlet>
     </ion-content>
   </div>
+
+  <ion-modal [isOpen]="isModalOpen">
+    <ng-template>
+      <div style="height: 50vh;">
+        <ion-img src="../assets/TOTVS.png" class="logo-ini"></ion-img>
+      </div>
+      <ion-spinner style="height: 50vh; margin: auto; transform: scale(2);"></ion-spinner>
+    </ng-template>
+  </ion-modal>
   

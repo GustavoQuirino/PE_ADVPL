@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,7 +6,9 @@ import { Router } from '@angular/router';
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
+
+  isModalOpen: boolean = true
 
   PeMata010: Array<any> = [
     { label: 'MT010MEM', link: '/MT010MEM'},
@@ -69,6 +71,10 @@ export class AppComponent {
   ]
 
   constructor( private router : Router ) {}
+
+  ngOnInit(): void {
+    setTimeout(()=>{ this.isModalOpen = false },3000)
+  }
 
   loadPage(pe: any){     
     this.router.navigate([pe.link])
