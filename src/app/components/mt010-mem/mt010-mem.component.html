@@ -7,32 +7,32 @@
       <ion-card-title>Descrição:</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <ion-card-subtitle>
-        Este ponto de entrada permite ao usuário que monte um vetor contendo a relação 
-        dos campos virtuais do tipo MEMO que ele criou.<br> 
-        O retorno deverá ser um vetor com o seguinte formato:<br>
-        {{formato}}<br>
-        aRet[cChave] = Nome do campo chave para identificar o conteúdo do campo memo.<br>
-        aRet[cMemo] = Nome do campo memo criado pelo usuário.<br>
-        No módulo configurador, o usuário deverá criar os campos seguindo as seguintes regras: <br>
-        - Ser do tipo CARACTER;  <br>
-        - Deverá possui o mesmo tamanho do campo YP_CHAVE da tabela SYP (padrão: 6 caracteres);  <br>
-        - Ter o contexto REAL; <br>
-        - Não necessita estar disponível para edição; <br>
-        - Não necessita estar visível no browse; <br>
-        <br>
-        O campo memo deverá: <br>
-        - Ser do tipo MEMO; <br>
-        - Ter o contexto VIRTUAL; <br>
-        - Deverá estar disponível para alteração; <br>
-        - No campo "Inic. Padrão" (pasta Opções) deverá conter: IF(!INCLUI, MSMM(), ""). <br>
-        Obs.: o parâmetro  que aparece na função MSMM deve conter o mesmo nome do campo chave criado pelo usuário.
-      </ion-card-subtitle>
+        <ion-card-subtitle class="descricao">
+          Este ponto de entrada permite ao usuário que monte um vetor contendo a relação 
+          dos campos virtuais do tipo MEMO que ele criou.<br> 
+          O retorno deverá ser um vetor com o seguinte formato:<br>
+          {{formato}}<br>
+          aRet[cChave] = Nome do campo chave para identificar o conteúdo do campo memo.<br>
+          aRet[cMemo] = Nome do campo memo criado pelo usuário.<br>
+          No módulo configurador, o usuário deverá criar os campos seguindo as seguintes regras: <br>
+          - Ser do tipo CARACTER;  <br>
+          - Deverá possui o mesmo tamanho do campo YP_CHAVE da tabela SYP (padrão: 6 caracteres);  <br>
+          - Ter o contexto REAL; <br>
+          - Não necessita estar disponível para edição; <br>
+          - Não necessita estar visível no browse; <br>
+          <br>
+          O campo memo deverá: <br>
+          - Ser do tipo MEMO; <br>
+          - Ter o contexto VIRTUAL; <br>
+          - Deverá estar disponível para alteração; <br>
+          - No campo "Inic. Padrão" (pasta Opções) deverá conter: IF(!INCLUI, MSMM(), ""). <br>
+          Obs.: o parâmetro  que aparece na função MSMM deve conter o mesmo nome do campo chave criado pelo usuário.
+        </ion-card-subtitle> 
     </ion-card-content>
     <ion-card-header class="exemplo">
       <ion-card-subtitle>{{exemplo[0]['linha1']}}</ion-card-subtitle>
-      <ion-card-subtitle>{{exemplo[0]['linha2']}}</ion-card-subtitle>
-      <ion-card-subtitle>{{exemplo[0]['linha3']}}</ion-card-subtitle>
+      <ion-card-subtitle style="margin-left: 5%;">{{exemplo[0]['linha2']}}</ion-card-subtitle>
+      <ion-card-subtitle style="margin-left: 5%;">{{exemplo[0]['linha3']}}</ion-card-subtitle>
       <ion-card-subtitle>{{exemplo[0]['linha4']}}</ion-card-subtitle>
     </ion-card-header>
   </ion-card>
