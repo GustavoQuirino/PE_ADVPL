@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+
+.exemplo{
+    background-color: black;
+}
+.exemplo ion-card-subtitle {    
+    color: #fff !important;
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: small;
+}
+
+.exemplo ion-card-title {
+    color: #fff !important; 
+}
+
+.descricao {
+    height: 60vh !important;
+    overflow-x: scroll;
+    margin-bottom: 2rem;
+}
