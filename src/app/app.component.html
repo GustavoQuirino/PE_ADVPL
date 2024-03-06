@@ -1,3 +1,30 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+<ion-menu contentId="main-content" id="menu">
+    <ion-header>
+        <ion-img src="../assets/TOTVS.png" class="logo"></ion-img>
+        <ion-card-header>Lista de Rotinas</ion-card-header>
+    </ion-header>
+    <ion-content class="ion-padding">
+        <ion-accordion-group *ngFor="let p of rotinas">
+            <ion-accordion>
+              <ion-item slot="header" color="light">
+                <ion-label>{{p.label}}</ion-label>
+              </ion-item>
+              <div class="ion-padding" slot="content" *ngFor="let d of p.details" (click)="loadPage(d)">{{d.label}}</div>
+            </ion-accordion>
+          </ion-accordion-group>
+    </ion-content>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Pontos de Entrada</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <router-outlet></router-outlet>
+    </ion-content>
+  </div>
+  
