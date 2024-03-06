@@ -74,6 +74,7 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     setTimeout(()=>{ this.isModalOpen = false },3000)
+    this.router.navigate([''])
   }
 
   loadPage(pe: any){     
